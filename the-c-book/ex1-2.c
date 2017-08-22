@@ -11,7 +11,7 @@ int is_equal(int actual, int expected) {
   if (actual == expected) {
     return 1;
   } else {
-    printf("Expected %d to equal %d", res, expected);
+    printf("Expected %d to equal %d.\n", actual, expected);
     return 0;
   }
 }
@@ -61,7 +61,7 @@ int test_is_prime(void) {
     printf("is_prime did not pass test cases, please refactor!\n");
     exit(0);
   }
-  printf("is_prime passed all test cases! Proceeding with program\n");
+  printf("is_prime passed all test cases! \n");
   return acceptable;
 }
 
@@ -76,19 +76,38 @@ int test_is_prime_pair(void) {
     int expected = cases[i][2];
 
     if (is_equal(res, expected) == 0) {
-      acceptable = 0;
+      acc = 0;
     }
   }
 
-
+  if (acc == 0) {
+    printf("is_prime_pair did not pass test cases, please refactor\n");
+    exit(0);
+  }
+  printf("is_prime_pair passed all tests!\n");
+  return acc;
 }
 
 int main() {
+  // run tests
   test_is_prime();
+  test_is_prime_pair();
+
   int n;
   int i;
+  i = 0;
 
   printf("Please enter a number\n");
   scanf("%d", &n);
 
+  while (i < n) {
+    int plus_two = i + 2;
+    if (is_prime_pair(i, plus_two) == 1) {
+      printf("The numbers %d and %d are a prime pair!\n", i, plus_two);
+    }
+
+    i = i + 1;
+  }
+
+  exit(0);
 }
