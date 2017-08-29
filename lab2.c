@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+int equal_itoi(int expect, int act) {
+  if (expect == act )
+}
+
+int equal_ftof(float expted, float act) {
+  if (expect == act) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
 int product(int a, int b) {
   int c;
   c = a * b;
@@ -13,7 +25,9 @@ float quotient(float a, float b) {
   c = a / b;
 
   printf("Floats (a,b) and quotient(c) are : %d, %d, %d\n", a, b, c);
+  return c;
 }
+
 
 int main () {
   /* variable definition: */
