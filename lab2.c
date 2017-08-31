@@ -55,5 +55,11 @@ int main () {
  		}
  	}
 
+  float d = 31.4;
+  float e = 22.1;
+  float f = d / e;
+
+  printf("%f divided by %f is %f.\n", d, e, f);
+
   return 0;
 }
