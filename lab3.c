@@ -12,6 +12,17 @@ float perimeter(float base, float height) {
     return base + height + (float)hypotenuse;
 }
 
+int sample(void) {
+  int i,j;
+  float f,g;
+  i = 5; j = 2;
+  f = 3.0;
+  f = f + j / i;
+  g = (f + j )/i;
+  printf("value of f,g is %f,%f\n", f,g);
+  return 0;
+}
+
 int main () {
   /* variable definition: */
   float base, height, area;
@@ -26,6 +37,8 @@ int main () {
   // Print the result
   printf("Area is : %f\n", area);
   printf("Perimeter is: %f\n", perimeter(base, height));
+
+  sample();
 
   return 0;
 }
