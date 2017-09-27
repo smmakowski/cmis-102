@@ -1,15 +1,17 @@
 #include <stdio.h>
 
 int main () {
-  int count, value, sum;
+  int count, value, sum, max;
   double avg;
 
   count = 0;
   sum = 0;
   avg = 0.0;
 
-  while (count < 20) {
-    //printf("Enter a positive Integer\n");
+  printf("Please enter the number of items you wish to average.\n");
+  scanf("%d", &max);
+
+  while (count < max) {
     scanf("%d", &value);
     if (value >= 0) {
       sum = sum + value;
@@ -19,7 +21,7 @@ int main () {
      }
   }
   avg = (double) sum/count;
-  printf("average is %lf\n " , avg );
+  printf("average is %.2lf\n " , avg );
 
   return 0;
 }
