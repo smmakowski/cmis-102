@@ -31,10 +31,10 @@ int main() {
     }
     printf("\n");
   }
-  //printf("                 =========================\n");
-  //printf("                 =========================\n");
+
   if (sriously) {
     printf("                \"I am sooo Sriously, you guys!!\"");
   }
+
   return 0;
 }

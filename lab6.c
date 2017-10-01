@@ -1,26 +1,24 @@
 #include <stdio.h>
-int main ()
-{
-  /* variable definition: */
+int main () {
   char StudentName[100];
   float ExamValue, Sum, Avg;
-  int students,exams;
-   // Loop through 5 Students
-  for (students=0; students <5 ; students++)
-  {
-     // reset Sum to 0
-     Sum =0.0;
+  int students, exams, num;
+
+  printf("How many students would you like to caluculate averages for?\n");
+  scanf("%d", &num);
+
+  for (students = 0; students < num ; students++) {
+     Sum = 0.0;
      printf("Enter Student Name \n");
      scanf("%s", StudentName);
-     // Nested Loop for Exams
-    for (exams=0; exams < 3; exams++)
-    {
+
+    for (exams=0; exams < 3; exams++)  {
         printf ("EnterD exam grade: \n");
         scanf("%f", &ExamValue);
         Sum += ExamValue;
     }
-    Avg = Sum/3.0;
-    printf( "Average for %s is %f\n",StudentName,Avg);
+    Avg = Sum / 3.0;
+    printf( "Average for %s is %f\n",StudentName, Avg);
   }
   return 0;
 }
