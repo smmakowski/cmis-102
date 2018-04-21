@@ -1,0 +1,5 @@
+# Filesystem stuff
+.DS_Store
+
+# Executables
+*.out
